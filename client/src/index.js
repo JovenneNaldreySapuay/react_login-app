@@ -9,7 +9,7 @@ import reducers from './reducers';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import App from './components/App';
 
-const store = createStore(
+const myStore = createStore(
 	reducers, 
 	composeWithDevTools(
 		applyMiddleware(reduxThunk)
@@ -17,7 +17,7 @@ const store = createStore(
 );
 
 ReactDOM.render(
-	<Provider store={store}>
+	<Provider store={myStore}>
 		<App />
 	</Provider>,
 	document.querySelector('#root')
